@@ -1,0 +1,971 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1f2122;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0px auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 980px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin-right: 0;
+}
+
+i.fas.fa-star {
+  color: gold;
+}
+
+i.fas.fa-download {
+  color: #e75e8d;
+}
+
+/* start main btns */
+.main-btn {
+  background-color: #e75e8d;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  text-transform: capitalize;
+  border-radius: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.main-btn:hover {
+  background-color: #fff;
+  color: #e75e8d;
+}
+
+.main-btn2 {
+  display: block;
+  border-radius: 40px;
+  text-transform: capitalize;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.main-btn2.downloaded {
+  width: 100%;
+  border: 1px solid #666;
+  color: #666;
+}
+
+.main-btn2.no-downloaded {
+  width: 90%;
+  border: 1px solid #e75e8d;
+  color: #e75e8d;
+  padding: 10px 20px;
+}
+@media (max-width: 767px) {
+  .main-btn2.no-downloaded {
+    width: 100%;
+  }
+}
+
+.main-btn3 {
+  color: #e75e8d;
+  border: 1px solid #e75e8d;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  border-radius: 40px;
+}
+.main-btn3:hover {
+  background-color: white;
+}
+
+/*end main btns*/
+.main-title {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .main-title {
+    font-size: 25px;
+  }
+}
+.main-title span:first-child {
+  color: white;
+  text-decoration: underline;
+}
+.main-title span:last-child {
+  color: #e75e8d;
+}
+
+/* start header */
+.header {
+  padding: 10px 0;
+}
+.header .container {
+  background-color: transparent;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .container .input {
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .header .container .input {
+    display: none;
+  }
+}
+.header .container .input input {
+  background-color: #27292a;
+  padding: 10px 10px 10px 40px;
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  position: relative;
+  color: #555;
+}
+.header .container .input::after {
+  content: "\f002";
+  position: absolute;
+  left: 10px;
+  font-size: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #666;
+}
+.header .container .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .container .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 992px) {
+  .header .container .links ul {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 0px;
+    min-height: 0px;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .header .container .links ul.open {
+    min-height: 250px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+.header .container .links ul li {
+  width: 100%;
+}
+.header .container .links ul li a {
+  color: #666;
+  padding: 20px;
+  font-size: 17px;
+  text-transform: capitalize;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .header .container .links ul li a {
+    padding: 20px 0;
+    display: block;
+  }
+}
+.header .container .links ul li a.active, .header .container .links ul li a:hover {
+  color: #e75e8d;
+}
+.header .container .links .profile {
+  background-color: #27292a;
+  padding: 5px 15px;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media (max-width: 992px) {
+  .header .container .links .profile {
+    display: none;
+  }
+}
+.header .container .links .profile span {
+  color: #666;
+  text-transform: capitalize;
+}
+.header .container .links .profile img {
+  border-radius: 50%;
+}
+.header .container .links .profile:hover {
+  background-color: #e75e8d;
+}
+.header .container .links .profile:hover span {
+  color: white;
+}
+.header .container .links .fa-bars {
+  font-size: 30px;
+  color: #666;
+  display: none;
+}
+.header .container .links .fa-bars:hover {
+  color: white;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .header .container .links .fa-bars {
+    display: block;
+  }
+}
+
+/* end header */
+.container {
+  background-color: #27292a;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
+  border-radius: 20px;
+}
+@media (max-width: 767px) {
+  .container {
+    padding: 15px;
+  }
+}
+.container .welcome {
+  background-image: url("../images/banner-bg.jpg");
+  background-size: cover;
+  padding: 100px 30px;
+  border-radius: 20px;
+}
+@media (max-width: 767px) {
+  .container .welcome {
+    text-align: center;
+  }
+}
+.container .welcome h3 {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+.container .welcome h1 {
+  font-size: 40px;
+  max-width: 50%;
+  color: white;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .container .welcome h1 {
+    max-width: 100%;
+    font-size: 30px;
+  }
+}
+.container .welcome h1 span {
+  color: #e75e8d;
+}
+.container .popular {
+  border-radius: 20px;
+  background-color: #1f2122;
+  padding: 30px;
+}
+@media (max-width: 767px) {
+  .container .popular {
+    padding: 10px;
+  }
+}
+.container .popular .content {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.container .popular .content .box {
+  background-color: #27292a;
+  padding: 15px;
+  border-radius: 20px;
+}
+.container .popular .content .box img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.container .popular .content .box .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.container .popular .content .box .info > div.downloads, .container .popular .content .box .info > div.rate {
+  text-align: end;
+}
+.container .popular .content .box .info > div.name {
+  color: white;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.container .popular .content .box .info > div.type {
+  color: #666;
+  text-transform: capitalize;
+}
+.container .popular .content .box .info > div.rate {
+  color: white;
+}
+.container .popular .content .box .info > div.rate .fa-star {
+  color: gold;
+}
+.container .popular .content .box .info > div.downloads {
+  color: white;
+}
+.container .popular .content .box .info > div.downloads .fa-download {
+  color: #e75e8d;
+}
+.container .popular .main-btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.container .library {
+  background-color: #1f2122;
+  padding: 30px;
+}
+.container .library .content .col {
+  display: grid;
+  grid-template-columns: 10% repeat(5, 18%);
+  margin-bottom: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 992px) {
+  .container .library .content .col {
+    grid-template-columns: 50% 50%;
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .container .library .content .col {
+    grid-template-columns: 100%;
+    text-align: center;
+  }
+}
+.container .library .content .col img {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+}
+.container .library .content .col .info {
+  text-transform: capitalize;
+  padding-left: 20px;
+}
+@media (max-width: 992px) {
+  .container .library .content .col .info {
+    padding: 0;
+  }
+}
+.container .library .content .col .info div:first-child {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.container .library .content .col .info div:last-child {
+  color: #666;
+}
+.container .library .content .col .download {
+  padding-right: 20px;
+}
+@media (max-width: 767px) {
+  .container .library .content .col .download {
+    padding: 0;
+  }
+}
+.container .library .main-btn {
+  margin: 0px auto;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.container .featured-and-topDownloaded {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 992px) {
+  .container .featured-and-topDownloaded {
+    grid-template-columns: 1fr;
+  }
+}
+.container .featured-and-topDownloaded .featured-games {
+  background-color: #1f2122;
+  padding: 30px;
+  border-radius: 20px;
+}
+.container .featured-and-topDownloaded .featured-games h1 {
+  margin-bottom: 0;
+}
+.container .featured-and-topDownloaded .featured-games .arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+.container .featured-and-topDownloaded .featured-games .arrows i {
+  font-size: 25px;
+  color: #666;
+  cursor: pointer;
+}
+.container .featured-and-topDownloaded .featured-games .arrows i:hover {
+  color: #e75e8d;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .img {
+  position: relative;
+  overflow: hidden;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .img img {
+  border-radius: 20px;
+  width: 100%;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .img span {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: -60px;
+  width: 90%;
+  background-color: #1f2122;
+  color: #e75e8d;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 40px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .img:hover > span {
+  bottom: 10px;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .info {
+  margin-top: 10px;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .info div.name {
+  color: white;
+  margin-bottom: 10px;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .info div.name span:first-child {
+  font-weight: bold;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .info div.name span i {
+  color: gold;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .info div.downloads span:first-child {
+  color: #666;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .info div.downloads span:last-child {
+  color: white;
+}
+.container .featured-and-topDownloaded .featured-games .slider .content .box .info div.downloads span:last-child i {
+  color: #e75e8d;
+}
+.container .topDownloaded {
+  background-color: #1f2122;
+  padding: 30px;
+  border-radius: 20px;
+}
+.container .topDownloaded .content .box {
+  display: grid;
+  grid-template-columns: 30% 1fr auto;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+.container .topDownloaded .content .box img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+.container .topDownloaded .content .box .text .name {
+  color: white;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.container .topDownloaded .content .box .text .type {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  color: #666;
+}
+.container .topDownloaded .content .box .text .nums {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  color: white;
+}
+.container .topDownloaded .content .box .text .nums .fa-star {
+  color: gold;
+}
+.container .topDownloaded .content .box .text .nums .fa-download {
+  color: #e75e8d;
+}
+.container .topDownloaded .content .box a i {
+  background-color: #27292a;
+  color: #e75e8d;
+  padding: 10px;
+  border-radius: 50%;
+}
+.container .topDownloaded a.main-btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto;
+}
+.container .start-stream {
+  background-color: #1f2122;
+  padding: 30px;
+  border-radius: 20px;
+}
+.container .start-stream .content {
+  display: grid;
+  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.container .start-stream .content .box {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  border: 1px solid #666;
+  border-radius: 20px;
+}
+.container .start-stream .content .box img {
+  border-radius: 50%;
+}
+.container .start-stream .content .box h3 {
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+}
+.container .start-stream .content .box p {
+  line-height: 1.6;
+  color: #666;
+  font-size: 17px;
+}
+.container .start-stream .content .box p a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.container .start-stream a.main-btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.container .popular-stream {
+  background-color: #1f2122;
+  border-radius: 20px;
+  padding: 30px;
+}
+.container .popular-stream .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 30px;
+}
+.container .popular-stream .content .img {
+  position: relative;
+  margin-bottom: 20px;
+}
+.container .popular-stream .content .img img {
+  width: 100%;
+  border-radius: 20px;
+}
+.container .popular-stream .content .img span {
+  background-color: #e75e8d;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 40px;
+  font-size: 17px;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.container .popular-stream .content .img span.live {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  text-transform: capitalize;
+}
+.container .popular-stream .content .img .statics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10px;
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+}
+.container .popular-stream .content .img:hover span {
+  opacity: 1;
+}
+.container .popular-stream .content .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .popular-stream .content .info img {
+  border-radius: 50%;
+}
+.container .popular-stream .content .info .text .name {
+  color: #e75e8d;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.container .popular-stream .content .info .text p {
+  color: white;
+  font-weight: 600;
+}
+.container .popular-stream .main-btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 40px auto 0;
+}
+
+/* start details */
+.vid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+}
+@media (max-width: 767px) {
+  .vid {
+    grid-template-columns: 1fr;
+  }
+}
+.vid img {
+  width: 100%;
+  border-radius: 20px;
+}
+.vid .img {
+  position: relative;
+}
+.vid .img a {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.vid .img a i {
+  font-size: 20px;
+  color: #e75e8d;
+  padding-left: 3px;
+}
+
+h1.fortnite-details {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+}
+
+.fortnite-info {
+  background-color: #1f2122;
+  padding: 30px;
+  border-radius: 20px;
+}
+.fortnite-info .statics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .fortnite-info .statics {
+    grid-template-columns: 1fr;
+  }
+}
+.fortnite-info .statics .box {
+  background-color: #27292a;
+  padding: 30px;
+  border-radius: 20px;
+}
+.fortnite-info .statics .box:first-child > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.fortnite-info .statics .box:first-child > div.name {
+  margin-bottom: 20px;
+}
+.fortnite-info .statics .box:first-child > div.name span:first-child {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+.fortnite-info .statics .box:first-child > div.name span:last-child {
+  color: white;
+}
+.fortnite-info .statics .box:first-child > div.name span:last-child i {
+  color: gold;
+}
+.fortnite-info .statics .box:first-child > div.type span:first-child {
+  color: #666;
+  font-size: 18px;
+}
+.fortnite-info .statics .box:first-child > div.type span:last-child {
+  color: white;
+}
+.fortnite-info .statics .box:first-child > div.type span:last-child i {
+  color: #e75e8d;
+}
+.fortnite-info .statics .box:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 60px;
+}
+@media (max-width: 767px) {
+  .fortnite-info .statics .box:last-child {
+    padding: 30px;
+  }
+}
+.fortnite-info .statics .box:last-child .one {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.fortnite-info .statics .box:last-child .one i {
+  color: #e75e8d;
+}
+.fortnite-info .statics .box:last-child .one i.fa-star {
+  color: gold;
+}
+.fortnite-info .imgs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 30px;
+  gap: 20px;
+}
+.fortnite-info .imgs img {
+  border-radius: 20px;
+  width: 100%;
+}
+.fortnite-info p {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.fortnite-info p a {
+  color: #999;
+}
+
+.related-games {
+  background-color: #1f2122;
+  padding: 30px;
+  border-radius: 20px;
+}
+.related-games .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+@media (max-width: 992px) {
+  .related-games .content {
+    grid-template-columns: 1fr;
+  }
+}
+.related-games .content .box {
+  background-color: #27292a;
+  padding: 30px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.related-games .content .box img {
+  border-radius: 20px;
+  width: 100%;
+}
+.related-games .content .box .info {
+  color: white;
+  text-transform: capitalize;
+}
+.related-games .content .box .info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.related-games .content .box .info > div.name {
+  margin-bottom: 15px;
+}
+.related-games .content .box .info > div.name span:first-child {
+  font-weight: bold;
+}
+.related-games .content .box .info > div.type span:first-child {
+  color: #666;
+}
+
+/* end details */
+/* start footer */
+.copyright {
+  padding: 40px;
+  text-align: center;
+  color: white;
+  line-height: 2;
+}
+.copyright a {
+  color: #e75e8d;
+}
+
+/* end footer */
